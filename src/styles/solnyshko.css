@@ -590,6 +590,29 @@
   color: var(--sol-muted);
 }
 
+.sol-ultimate__nail--folk {
+  border: 1px solid rgba(192, 95, 34, 0.45);
+  background: rgba(192, 95, 34, 0.05);
+}
+
+.sol-ultimate__nail--official {
+  border: 1px solid rgba(93, 122, 58, 0.45);
+  background: rgba(93, 122, 58, 0.05);
+}
+
+.sol-ultimate__case {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--sol-line);
+  font-size: 13.5px;
+  color: var(--sol-muted);
+}
+
+.sol-ultimate__case b {
+  color: var(--sol-ink);
+  font-size: 13px;
+}
+
 .sol-ultimate__current {
   font-size: 14.5px;
   color: var(--sol-ink);

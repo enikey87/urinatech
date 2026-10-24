@@ -61,14 +61,21 @@ function SolKalofores() {
           </div>
           <p className="sol-ultimate__intro">{KALO_ULTIMATE.intro}</p>
           <div className="sol-ultimate__nails">
-            {KALO_ULTIMATE.nails.map((n) => (
-              <div key={n.title} className="sol-ultimate__nail">
-                <b>🔨 {n.title}</b>
-                <p>{n.use}</p>
-              </div>
-            ))}
+            <div className="sol-ultimate__nail sol-ultimate__nail--folk">
+              <b>⚡ {KALO_ULTIMATE.folk.title}</b>
+              <p>{KALO_ULTIMATE.folk.text}</p>
+              <p className="sol-ultimate__case">
+                <b>{KALO_ULTIMATE.folk.caseTitle}.</b> {KALO_ULTIMATE.folk.caseText}
+              </p>
+            </div>
+            <div className="sol-ultimate__nail sol-ultimate__nail--official">
+              <b>🛡 {KALO_ULTIMATE.official.title}</b>
+              <p>{KALO_ULTIMATE.official.text}</p>
+              <p className="sol-ultimate__case">
+                <b>{KALO_ULTIMATE.official.altTitle}.</b> {KALO_ULTIMATE.official.altText}
+              </p>
+            </div>
           </div>
-          <p className="sol-ultimate__current">{KALO_ULTIMATE.current}</p>
           <p className="sol-ultimate__ban">⚠ {KALO_ULTIMATE.ban}</p>
           <p className="sol-ultimate__last">{KALO_ULTIMATE.ifNotHelped}</p>
         </div>
