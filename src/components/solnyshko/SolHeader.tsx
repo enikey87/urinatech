@@ -7,6 +7,10 @@ function SolHeader() {
 
   return (
     <header className="sol-header">
+      <div className="sol-topbar">
+        <span>Профсоюзная путёвка · действует бессрочно</span>
+        <span>форма №1246</span>
+      </div>
       <div className="sol-header__inner">
         <a
           className="sol-header__brand"

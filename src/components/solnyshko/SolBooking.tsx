@@ -15,7 +15,7 @@ function SolBooking() {
           <span className="sol-label">Отделение путёвок</span>
           <h2 className="sol-title">Путёвка оформлена</h2>
           <div className="sol-voucher">
-            <div className="sol-voucher__stamp">Солнышко · 1246</div>
+            <div className="sol-voucher__stamp">Оплачено</div>
             <div className="sol-voucher__num">{solnyshko.voucher}</div>
             <p>
               Отдыхающий: <b>{solnyshko.name.trim()}</b>
