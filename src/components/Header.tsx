@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { href: "#reviews", label: "Клиника" },
   { href: "#detector", label: "Верификация" },
   { href: "#donor", label: "Донорам" },
-  { href: "#struggle", label: "Позиция" },
   { href: "#company", label: "Компания" },
   { href: "#/solnyshko", label: "☀ Солнышко", extra: "nav__sol" },
   { href: "#faq", label: "FAQ" },
