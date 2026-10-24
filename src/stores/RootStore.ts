@@ -3,10 +3,8 @@ import { CartStore } from "./CartStore";
 import { DetectorStore } from "./DetectorStore";
 import { DonorStore } from "./DonorStore";
 import { TestimonialsStore } from "./TestimonialsStore";
-import { TickerStore } from "./TickerStore";
 import { CountdownStore } from "./CountdownStore";
 import { CalculatorStore } from "./CalculatorStore";
-import { ChatStore } from "./ChatStore";
 import { PollStore } from "./PollStore";
 import { CookiesStore } from "./CookiesStore";
 import { RouterStore } from "./RouterStore";
@@ -17,10 +15,8 @@ export interface RootStore {
   detector: DetectorStore;
   donor: DonorStore;
   testimonials: TestimonialsStore;
-  ticker: TickerStore;
   countdown: CountdownStore;
   calc: CalculatorStore;
-  chat: ChatStore;
   poll: PollStore;
   cookies: CookiesStore;
   router: RouterStore;
@@ -33,10 +29,8 @@ export function createRootStore(): RootStore {
     detector: new DetectorStore(),
     donor: new DonorStore(),
     testimonials: new TestimonialsStore(),
-    ticker: new TickerStore(),
     countdown: new CountdownStore(),
     calc: new CalculatorStore(),
-    chat: new ChatStore(),
     poll: new PollStore(),
     cookies: new CookiesStore(),
     router: new RouterStore(),

@@ -3,7 +3,6 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "./stores/RootStore";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import StockTicker from "./components/StockTicker";
 import Stats from "./components/Stats";
 import Products from "./components/Products";
 import Countdown from "./components/Countdown";
@@ -13,15 +12,12 @@ import Instructions from "./components/Instructions";
 import Testimonials from "./components/Testimonials";
 import Detector from "./components/Detector";
 import Donor from "./components/Donor";
-import Struggle from "./components/Struggle";
 import Licenses from "./components/Licenses";
 import Company from "./components/Company";
 import Partners from "./components/Partners";
-import Roadmap from "./components/Roadmap";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
-import ZinaidaChat from "./components/ZinaidaChat";
 import CookiesBanner from "./components/CookiesBanner";
 import NotFound from "./components/NotFound";
 import SolnyshkoApp from "./components/SolnyshkoApp";
@@ -54,7 +50,6 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
       <Header />
       <main>
         <Hero />
-        <StockTicker />
         <Stats />
         <Products />
         <Countdown />
@@ -64,16 +59,13 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
         <Testimonials />
         <Detector />
         <Donor />
-        <Struggle />
         <Licenses />
         <Company />
         <Partners />
-        <Roadmap />
         <Faq />
       </main>
       <Footer />
       <CartDrawer />
-      <ZinaidaChat />
       <CookiesBanner />
     </div>
   );
