@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Карточка пациента: ГО">
+  <defs>
+    <pattern id="h-grigory" width="18" height="18" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="18" stroke="#27436b" stroke-width="2" opacity="0.14"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#faf3e0"/>
+  <rect width="256" height="256" fill="url(#h-grigory)"/>
+  <circle cx="128" cy="128" r="97" fill="#faf3e0" stroke="#1f1a12" stroke-width="5"/>
+  <circle cx="128" cy="128" r="86" fill="none" stroke="#b03a2e" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="128" y="152" text-anchor="middle" font-family="'PT Sans','Arial',sans-serif" font-weight="700" font-size="68" fill="#1f1a12" letter-spacing="2">ГО</text>
+  <circle cx="186" cy="70" r="7" fill="#b03a2e"/>
+  <rect x="34" y="222" width="60" height="3" fill="#b03a2e"/>
+</svg>
