@@ -24,11 +24,25 @@ function Testimonials() {
           прозрачность является принципом компании. Оригиналы обращений хранятся
           в гостевой книге, проверяйте даты.
         </p>
+        <p
+          className="section-sub"
+          style={{ fontSize: 12, marginTop: 6, fontFamily: "var(--mono)" }}
+        >
+          Внешний вид пациентов восстановлен нейросетью по описаниям из гостевой
+          книги. Совпадения с живыми людьми случайны и статистически невероятны.
+        </p>
         <div className="reviews-grid">
           {testimonials.reviews.map((r) => (
             <article key={r.id} className="glass review-card">
               <div className="review-card__head">
-                <div className="review-card__avatar">{r.avatar}</div>
+                <div className="review-card__avatar">
+                  <img
+                    className="review-card__img"
+                    src={`${import.meta.env.BASE_URL}avatars/${r.avatar}`}
+                    alt={`Портрет: ${r.name}`}
+                    loading="lazy"
+                  />
+                </div>
                 <div>
                   <div className="review-card__name">{r.name}</div>
                   <div className="review-card__city">{r.city}</div>
