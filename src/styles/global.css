@@ -107,7 +107,7 @@ h1, h2, h3 {
 }
 
 .grad-text {
-  color: var(--red);
+  color: #a87200;
 }
 
 /* ---------- кнопки ---------- */
@@ -324,7 +324,7 @@ h1, h2, h3 {
 .drop {
   width: 44px;
   height: 44px;
-  background: var(--red);
+  background: #e2a41f;
   border: 3px solid var(--border);
   border-radius: 50% 0 50% 50%;
   transform: rotate(45deg);
@@ -340,7 +340,7 @@ h1, h2, h3 {
   width: 26%;
   height: 26%;
   border-radius: 50%;
-  background: rgba(247, 236, 214, 0.6);
+  background: rgba(255, 250, 235, 0.85);
   filter: blur(1px);
 }
 
