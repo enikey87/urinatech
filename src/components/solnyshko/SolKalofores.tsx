@@ -1,4 +1,4 @@
-import { KALO_MODES, KALO_SUBSTANCES } from "../../data/solnyshko";
+import { KALO_MODES, KALO_SUBSTANCES, KALO_ULTIMATE } from "../../data/solnyshko";
 
 function SolKalofores() {
   return (
@@ -52,6 +52,25 @@ function SolKalofores() {
               (временно снимается первой процедурой).
             </div>
           </div>
+        </div>
+
+        <div className="sol-ultimate">
+          <div className="sol-ultimate__head">
+            <h3>{KALO_ULTIMATE.name}</h3>
+            <span className="sol-badge">для особых случаев · {KALO_ULTIMATE.code}</span>
+          </div>
+          <p className="sol-ultimate__intro">{KALO_ULTIMATE.intro}</p>
+          <div className="sol-ultimate__nails">
+            {KALO_ULTIMATE.nails.map((n) => (
+              <div key={n.title} className="sol-ultimate__nail">
+                <b>🔨 {n.title}</b>
+                <p>{n.use}</p>
+              </div>
+            ))}
+          </div>
+          <p className="sol-ultimate__current">{KALO_ULTIMATE.current}</p>
+          <p className="sol-ultimate__ban">⚠ {KALO_ULTIMATE.ban}</p>
+          <p className="sol-ultimate__last">{KALO_ULTIMATE.ifNotHelped}</p>
         </div>
       </div>
     </section>

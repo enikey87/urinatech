@@ -530,6 +530,91 @@
   }
 }
 
+/* ---------- гвоздевой комплект (ультимативный калофорез) ---------- */
+
+.sol-ultimate {
+  margin-top: 18px;
+  background: var(--sol-card);
+  border: 2px solid var(--sol-terra);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 14px 34px rgba(192, 95, 34, 0.16);
+}
+
+.sol-ultimate__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sol-ultimate__head h3 {
+  font-family: var(--sol-serif);
+  font-weight: 800;
+  font-size: 23px;
+}
+
+.sol-ultimate__intro {
+  margin-top: 12px;
+  color: var(--sol-ink);
+  font-size: 15px;
+}
+
+.sol-ultimate__nails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+@media (max-width: 700px) {
+  .sol-ultimate__nails {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-ultimate__nail {
+  border: 1px dashed var(--sol-line);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.sol-ultimate__nail b {
+  font-size: 15px;
+}
+
+.sol-ultimate__nail p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--sol-muted);
+}
+
+.sol-ultimate__current {
+  font-size: 14.5px;
+  color: var(--sol-ink);
+  border-top: 1px solid var(--sol-line);
+  padding-top: 16px;
+}
+
+.sol-ultimate__ban {
+  margin-top: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #8f3616;
+  background: rgba(192, 95, 34, 0.08);
+  border: 1px dashed rgba(192, 95, 34, 0.5);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.sol-ultimate__last {
+  margin-top: 14px;
+  font-size: 13.5px;
+  font-style: italic;
+  color: var(--sol-muted);
+}
+
 /* ---------- стационар / номера / отзывы ---------- */
 
 .sol-station {
