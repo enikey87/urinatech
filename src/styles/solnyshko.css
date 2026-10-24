@@ -1,0 +1,816 @@
+/* ============================================================
+   Пансионат «Солнышко» — подсайт здравницы.
+   Светлая бумажно-кремовая тема в рамках общего дизайн-концепта.
+   ============================================================ */
+
+.sol {
+  --sol-bg: #f5ead3;
+  --sol-bg-soft: #efe1c4;
+  --sol-card: #fffaf0;
+  --sol-ink: #3b2a16;
+  --sol-muted: #8a7355;
+  --sol-line: #e0cfab;
+  --sol-sun: #e89b26;
+  --sol-terra: #c05f22;
+  --sol-taiga: #5d7a3a;
+  --sol-serif: "Playfair Display", Georgia, serif;
+
+  min-height: 100vh;
+  background: var(--sol-bg);
+  background-image: radial-gradient(
+      circle at 12% 8%,
+      rgba(232, 155, 38, 0.14),
+      transparent 42%
+    ),
+    radial-gradient(circle at 88% 90%, rgba(93, 122, 58, 0.1), transparent 40%);
+  color: var(--sol-ink);
+  font-family: "PT Sans", "Inter", system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+.sol ::selection {
+  background: var(--sol-sun);
+  color: #2c1c06;
+}
+
+.sol-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sol-section {
+  padding: 88px 0;
+}
+
+/* ---------- типографика ---------- */
+
+.sol-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sol-terra);
+  border: 1px solid rgba(192, 95, 34, 0.4);
+  background: rgba(192, 95, 34, 0.07);
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.sol-title {
+  font-family: var(--sol-serif);
+  font-weight: 900;
+  font-size: clamp(30px, 4.6vw, 46px);
+  line-height: 1.12;
+  margin-bottom: 14px;
+}
+
+.sol-title em {
+  font-style: italic;
+  color: var(--sol-terra);
+}
+
+.sol-sub {
+  color: var(--sol-muted);
+  max-width: 660px;
+  font-size: 16.5px;
+}
+
+/* ---------- кнопки / ссылки ---------- */
+
+.sol-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 999px;
+  padding: 13px 26px;
+  cursor: pointer;
+  border: 2px solid var(--sol-terra);
+  background: var(--sol-terra);
+  color: #fff6e8;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 22px rgba(192, 95, 34, 0.28);
+}
+
+.sol-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(192, 95, 34, 0.4);
+}
+
+.sol-btn--ghost {
+  background: transparent;
+  color: var(--sol-terra);
+  box-shadow: none;
+}
+
+.sol-btn--ghost:hover {
+  background: rgba(192, 95, 34, 0.08);
+}
+
+.sol-btn--big {
+  font-size: 16.5px;
+  padding: 16px 32px;
+}
+
+.sol-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sol-link {
+  background: none;
+  border: none;
+  color: var(--sol-terra);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  padding: 6px 2px;
+}
+
+/* ---------- эмблема ---------- */
+
+.sol-emblem__rays {
+  fill: var(--sol-sun);
+  transform-origin: 50px 50px;
+  animation: sol-spin 46s linear infinite;
+}
+
+.sol-emblem__disc {
+  fill: var(--sol-terra);
+}
+
+.sol-emblem__core {
+  fill: #f8d998;
+}
+
+@keyframes sol-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- шапка ---------- */
+
+.sol-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245, 234, 211, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sol-line);
+}
+
+.sol-header__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sol-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--sol-ink);
+  cursor: pointer;
+}
+
+.sol-header__name {
+  display: block;
+  font-family: var(--sol-serif);
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.sol-header__sub {
+  display: block;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+}
+
+.sol-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 760px) {
+  .sol-header__actions .sol-link {
+    display: none;
+  }
+}
+
+/* ---------- hero ---------- */
+
+.sol-hero {
+  position: relative;
+  padding: 110px 0 96px;
+  overflow: hidden;
+}
+
+.sol-hero .sol-container {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  flex-wrap: wrap;
+}
+
+.sol-hero__emblem {
+  flex-shrink: 0;
+  filter: drop-shadow(0 18px 40px rgba(232, 155, 38, 0.45));
+}
+
+.sol-hero__text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.sol-hero__title {
+  font-family: var(--sol-serif);
+  font-weight: 900;
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 1.04;
+  margin: 18px 0;
+}
+
+.sol-hero__title em {
+  font-style: italic;
+  color: var(--sol-terra);
+}
+
+.sol-hero__sub {
+  color: var(--sol-muted);
+  max-width: 560px;
+  font-size: 17.5px;
+  margin-bottom: 30px;
+}
+
+.sol-hero__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.sol-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.sol-badge {
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px dashed var(--sol-line);
+  background: var(--sol-card);
+  color: var(--sol-muted);
+}
+
+.sol-badge s {
+  opacity: 0.6;
+}
+
+.sol-stamp {
+  position: absolute;
+  right: clamp(16px, 6vw, 90px);
+  bottom: 40px;
+  transform: rotate(-11deg);
+  border: 2.5px solid rgba(93, 122, 58, 0.55);
+  color: rgba(93, 122, 58, 0.75);
+  border-radius: 50%;
+  width: 118px;
+  height: 118px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  line-height: 1.35;
+  pointer-events: none;
+  animation: sol-stamp-in 0.6s ease 0.4s both;
+}
+
+@keyframes sol-stamp-in {
+  from {
+    opacity: 0;
+    transform: rotate(-11deg) scale(1.6);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-11deg) scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .sol-stamp {
+    display: none;
+  }
+}
+
+/* ---------- карточки ---------- */
+
+.sol-card {
+  background: var(--sol-card);
+  border: 1px solid var(--sol-line);
+  border-radius: 18px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 10px 28px rgba(93, 72, 40, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sol-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(93, 72, 40, 0.14);
+}
+
+.sol-card--accent {
+  border-top: 4px solid var(--sol-sun);
+}
+
+.sol-card--sm {
+  padding: 22px 20px;
+}
+
+.sol-card h3 {
+  font-family: var(--sol-serif);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.sol-card p {
+  color: var(--sol-muted);
+  font-size: 14.5px;
+}
+
+.sol-card__emoji {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.sol-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.sol-services .sol-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 960px) {
+  .sol-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- клизмотроника ---------- */
+
+.sol-enemas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 44px;
+}
+
+@media (max-width: 1020px) {
+  .sol-enemas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sol-enemas {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-card--sm h3 {
+  font-size: 17.5px;
+}
+
+.sol-enemas__region {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sol-taiga);
+}
+
+.sol-enemas__substance {
+  color: var(--sol-ink);
+  font-size: 14px;
+}
+
+.sol-enemas__note {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--sol-muted);
+}
+
+/* ---------- калофорез ---------- */
+
+.sol-section--wide {
+  background: var(--sol-bg-soft);
+  border-top: 1px solid var(--sol-line);
+  border-bottom: 1px solid var(--sol-line);
+}
+
+.sol-kalo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+@media (max-width: 800px) {
+  .sol-kalo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-device {
+  margin-top: 22px;
+  background: var(--sol-card);
+  border: 1px solid var(--sol-line);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 10px 28px rgba(93, 72, 40, 0.08);
+}
+
+.sol-device__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sol-device__head h3 {
+  font-family: var(--sol-serif);
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.sol-device__modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+@media (max-width: 800px) {
+  .sol-device__modes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-device__mode {
+  border: 1px dashed var(--sol-line);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.sol-device__mode-name {
+  font-family: var(--sol-serif);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.sol-device__mode-current {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sol-terra);
+  margin: 4px 0 8px;
+}
+
+.sol-device__mode p {
+  font-size: 13.5px;
+  color: var(--sol-muted);
+}
+
+.sol-device__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 13.5px;
+  color: var(--sol-muted);
+  border-top: 1px solid var(--sol-line);
+  padding-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .sol-device__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- стационар / номера / отзывы ---------- */
+
+.sol-station {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 44px;
+}
+
+@media (max-width: 960px) {
+  .sol-station {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-station__days {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sol-terra);
+}
+
+.sol-rooms__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sol-rooms__list li {
+  font-size: 14px;
+  color: var(--sol-ink);
+  display: flex;
+  gap: 8px;
+}
+
+.sol-rooms__list li::before {
+  content: "✓";
+  color: var(--sol-taiga);
+  font-weight: 700;
+}
+
+.sol-review__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sol-review__head b {
+  font-size: 15.5px;
+}
+
+.sol-review__head span {
+  font-size: 12.5px;
+  color: var(--sol-taiga);
+  font-weight: 700;
+}
+
+/* ---------- персонал ---------- */
+
+.sol-staff {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 44px;
+}
+
+@media (max-width: 1020px) {
+  .sol-staff {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sol-staff {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- форма / путёвка ---------- */
+
+.sol-form {
+  margin-top: 40px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sol-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sol-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sol-input {
+  background: var(--sol-card);
+  border: 1.5px solid var(--sol-line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--sol-ink);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.sol-input:focus {
+  border-color: var(--sol-terra);
+}
+
+.sol-voucher {
+  margin-top: 40px;
+  max-width: 560px;
+  background: var(--sol-card);
+  border: 2px solid var(--sol-terra);
+  border-radius: 6px;
+  padding: 34px;
+  position: relative;
+  box-shadow: 0 18px 44px rgba(93, 72, 40, 0.18);
+  animation: sol-stamp-in 0.45s ease both;
+}
+
+.sol-voucher::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed rgba(192, 95, 34, 0.5);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.sol-voucher__num {
+  font-family: var(--sol-serif);
+  font-weight: 900;
+  font-size: 34px;
+  color: var(--sol-terra);
+  letter-spacing: 0.04em;
+  margin: 6px 0 14px;
+}
+
+.sol-voucher p {
+  font-size: 15px;
+  color: var(--sol-muted);
+}
+
+.sol-voucher__note {
+  margin-top: 12px;
+  font-size: 13.5px;
+  font-style: italic;
+}
+
+.sol-voucher__stamp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  transform: rotate(9deg);
+  border: 2px solid rgba(93, 122, 58, 0.6);
+  color: rgba(93, 122, 58, 0.8);
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+}
+
+/* ---------- FAQ ---------- */
+
+.sol-faq {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.sol-faq__item {
+  background: var(--sol-card);
+  border: 1px solid var(--sol-line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.sol-faq__item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 22px;
+  font-weight: 700;
+  font-size: 15.5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.sol-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.sol-faq__item summary::after {
+  content: "+";
+  font-size: 22px;
+  color: var(--sol-terra);
+  font-weight: 400;
+  transition: transform 0.25s ease;
+}
+
+.sol-faq__item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.sol-faq__item p {
+  padding: 0 22px 18px;
+  color: var(--sol-muted);
+  font-size: 14.5px;
+}
+
+/* ---------- футер ---------- */
+
+.sol-footer {
+  border-top: 1px solid var(--sol-line);
+  background: var(--sol-bg-soft);
+  padding: 56px 0 32px;
+  margin-top: 40px;
+}
+
+.sol-footer__grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sol-footer__col {
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sol-footer__col b {
+  font-family: var(--sol-serif);
+  font-size: 15px;
+}
+
+.sol-footer__col p {
+  color: var(--sol-muted);
+  font-size: 14px;
+}
+
+.sol-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--sol-serif);
+  font-size: 17px;
+}
+
+.sol-footer__bottom {
+  margin-top: 40px;
+  padding-top: 22px;
+  border-top: 1px solid var(--sol-line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--sol-muted);
+  font-size: 13px;
+}

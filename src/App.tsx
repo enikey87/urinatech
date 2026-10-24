@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { observer } from "mobx-react-lite";
+import { useStore } from "./stores/RootStore";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import StockTicker from "./components/StockTicker";
@@ -21,13 +24,27 @@ import CartDrawer from "./components/CartDrawer";
 import ZinaidaChat from "./components/ZinaidaChat";
 import CookiesBanner from "./components/CookiesBanner";
 import NotFound from "./components/NotFound";
+import SolnyshkoApp from "./components/SolnyshkoApp";
 
-export default function App({ initialNotFound }: { initialNotFound: boolean }) {
-  // Редирект с 404.html: если путь был не корневой — показываем страницу 404
+export default observer(function App({ initialNotFound }: { initialNotFound: boolean }) {
+  const { router } = useStore();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [router.route]);
+
   if (initialNotFound) {
     return (
       <div className="noise">
         <NotFound />
+      </div>
+    );
+  }
+
+  if (router.route === "solnyshko") {
+    return (
+      <div className="sol">
+        <SolnyshkoApp />
       </div>
     );
   }
@@ -60,4 +77,4 @@ export default function App({ initialNotFound }: { initialNotFound: boolean }) {
       <CookiesBanner />
     </div>
   );
-}
+});

@@ -6,6 +6,7 @@ import {
   createRootStore,
 } from "./stores/RootStore";
 import "./styles/global.css";
+import "./styles/solnyshko.css";
 
 const store = createRootStore();
 

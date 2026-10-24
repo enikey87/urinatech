@@ -9,6 +9,8 @@ import { CalculatorStore } from "./CalculatorStore";
 import { ChatStore } from "./ChatStore";
 import { PollStore } from "./PollStore";
 import { CookiesStore } from "./CookiesStore";
+import { RouterStore } from "./RouterStore";
+import { SolnyshkoStore } from "./SolnyshkoStore";
 
 export interface RootStore {
   cart: CartStore;
@@ -21,6 +23,8 @@ export interface RootStore {
   chat: ChatStore;
   poll: PollStore;
   cookies: CookiesStore;
+  router: RouterStore;
+  solnyshko: SolnyshkoStore;
 }
 
 export function createRootStore(): RootStore {
@@ -35,6 +39,8 @@ export function createRootStore(): RootStore {
     chat: new ChatStore(),
     poll: new PollStore(),
     cookies: new CookiesStore(),
+    router: new RouterStore(),
+    solnyshko: new SolnyshkoStore(),
   };
 }
 

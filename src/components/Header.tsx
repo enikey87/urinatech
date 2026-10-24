@@ -20,6 +20,9 @@ function Header() {
           <a href="#donor">Донорам</a>
           <a href="#struggle">Позиция</a>
           <a href="#company">Компания</a>
+          <a href="#/solnyshko" className="nav__sol">
+            ☀ Солнышко
+          </a>
           <a href="#faq">FAQ</a>
         </nav>
         <button className="btn btn-primary btn-sm cart-btn" onClick={() => cart.open()}>
