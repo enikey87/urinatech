@@ -89,6 +89,11 @@ function CartDrawer() {
               <button className="btn btn-primary" onClick={() => cart.checkout()}>
                 Оформить заказ
               </button>
+              <button className="cart-contract" onClick={() => cart.readContract()}>
+                {cart.contractReaders === 0
+                  ? "Договор прочитали: 0 человек"
+                  : `Договор прочитали: ${cart.contractReaders} чел. — рекорд за 24 года`}
+              </button>
               <p style={{ fontSize: 12, color: "var(--muted)", textAlign: "center" }}>
                 Оплата: карта, безналичный расчёт, натура (сено, по курсу дня).
               </p>

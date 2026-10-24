@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
+import Poll from "./Poll";
 
 function Stars({ n }: { n: number }) {
   return (
@@ -51,6 +52,7 @@ function Testimonials() {
             </button>
           </div>
         )}
+        <Poll />
       </div>
     </section>
   );

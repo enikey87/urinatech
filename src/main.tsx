@@ -9,10 +9,23 @@ import "./styles/global.css";
 
 const store = createRootStore();
 
+// Читаем флаг редиректа с 404.html до первого рендера (StrictMode дважды
+// вызывает инициализаторы useState, поэтому чтение вынесено сюда)
+const notFound = (() => {
+  try {
+    const r = sessionStorage.getItem("ut-redirect");
+    if (r) sessionStorage.removeItem("ut-redirect");
+    const path = (r ?? "").split("?")[0].replace(/\/+$/, "");
+    return path !== "" && path !== "/urinatech";
+  } catch {
+    return false;
+  }
+})();
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RootStoreContext.Provider value={store}>
-      <App />
+      <App initialNotFound={notFound} />
     </RootStoreContext.Provider>
   </StrictMode>
 );

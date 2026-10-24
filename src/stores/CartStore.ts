@@ -10,9 +10,14 @@ export class CartStore {
   items: CartItem[] = [];
   isOpen = false;
   lastOrderTotal: number | null = null;
+  contractReaders = 0;
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  readContract(): void {
+    this.contractReaders += 1;
   }
 
   add(product: Product): void {

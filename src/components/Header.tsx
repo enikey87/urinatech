@@ -13,12 +13,13 @@ function Header() {
         </a>
         <nav className="nav">
           <a href="#products">Продукция</a>
+          <a href="#instructions">Инструкция</a>
           <a href="#pricing">Тарифы</a>
           <a href="#reviews">Клиника</a>
           <a href="#detector">Верификация</a>
           <a href="#donor">Донорам</a>
           <a href="#struggle">Позиция</a>
-          <a href="#roadmap">Стратегия</a>
+          <a href="#company">Компания</a>
           <a href="#faq">FAQ</a>
         </nav>
         <button className="btn btn-primary btn-sm cart-btn" onClick={() => cart.open()}>
