@@ -28,7 +28,8 @@ function SolHeader() {
         </a>
         <div className="sol-header__actions">
           <button className="sol-link" onClick={() => router.goMain()}>
-            ООО «УринаТех» — основной сайт
+            <span className="sol-link__full">ООО «УринаТех» — основной сайт</span>
+            <span className="sol-link__short">Основной сайт</span>
           </button>
           <button
             className="sol-btn"

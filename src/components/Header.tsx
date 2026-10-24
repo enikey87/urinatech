@@ -1,8 +1,23 @@
+import { useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
 
+const NAV_LINKS = [
+  { href: "#products", label: "Продукция" },
+  { href: "#instructions", label: "Инструкция" },
+  { href: "#pricing", label: "Тарифы" },
+  { href: "#reviews", label: "Клиника" },
+  { href: "#detector", label: "Верификация" },
+  { href: "#donor", label: "Донорам" },
+  { href: "#struggle", label: "Позиция" },
+  { href: "#company", label: "Компания" },
+  { href: "#/solnyshko", label: "☀ Солнышко", extra: "nav__sol" },
+  { href: "#faq", label: "FAQ" },
+];
+
 function Header() {
   const { cart } = useStore();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="header">
@@ -11,29 +26,41 @@ function Header() {
         <span>ЭКЗ. № 1 · ЛИСТ 1 · ИЗМ. 1246</span>
       </div>
       <div className="header__inner">
-        <a className="logo" href="#top">
+        <a className="logo" href="#top" onClick={() => setMenuOpen(false)}>
           <span className="logo__drop">УТ</span>
           УринаТех
         </a>
-        <nav className="nav">
-          <a href="#products">Продукция</a>
-          <a href="#instructions">Инструкция</a>
-          <a href="#pricing">Тарифы</a>
-          <a href="#reviews">Клиника</a>
-          <a href="#detector">Верификация</a>
-          <a href="#donor">Донорам</a>
-          <a href="#struggle">Позиция</a>
-          <a href="#company">Компания</a>
-          <a href="#/solnyshko" className="nav__sol">
-            ☀ Солнышко
-          </a>
-          <a href="#faq">FAQ</a>
+        <nav className="nav" aria-label="Основная навигация">
+          {NAV_LINKS.map((l) => (
+            <a key={l.href} href={l.href} className={l.extra}>
+              {l.label}
+            </a>
+          ))}
         </nav>
-        <button className="btn btn-primary btn-sm cart-btn" onClick={() => cart.open()}>
-          Корзина
-          {cart.count > 0 && <span className="cart-btn__badge">{cart.count}</span>}
-        </button>
+        <div className="header__actions">
+          <button className="btn btn-primary btn-sm cart-btn" onClick={() => cart.open()}>
+            Корзина
+            {cart.count > 0 && <span className="cart-btn__badge">{cart.count}</span>}
+          </button>
+          <button
+            className={`burger ${menuOpen ? "burger--open" : ""}`}
+            aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
+      <nav className={`mobile-nav ${menuOpen ? "mobile-nav--open" : ""}`} aria-label="Мобильная навигация">
+        {NAV_LINKS.map((l) => (
+          <a key={l.href} href={l.href} className={l.extra} onClick={() => setMenuOpen(false)}>
+            {l.label}
+          </a>
+        ))}
+      </nav>
     </header>
   );
 }

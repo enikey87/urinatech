@@ -244,9 +244,31 @@
   gap: 16px;
 }
 
+.sol-link__short {
+  display: none;
+}
+
 @media (max-width: 760px) {
-  .sol-header__actions .sol-link {
-    display: none;
+  .sol-header__inner {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .sol-header__name { font-size: 16px; }
+  .sol-header__sub { font-size: 9.5px; letter-spacing: 0.16em; }
+  .sol-header__brand svg { width: 38px; height: 38px; }
+
+  .sol-link { font-size: 13px; padding: 6px; }
+  .sol-link__full { display: none; }
+  .sol-link__short { display: inline; }
+
+  .sol-btn { font-size: 13px; padding: 11px 16px; }
+
+  .sol-topbar {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    padding: 6px 16px;
   }
 }
 
@@ -374,6 +396,12 @@
   .sol-stamp {
     display: none;
   }
+
+  .sol-hero { padding: 48px 0 52px; }
+  .sol-hero__emblem svg { width: 140px; height: 140px; }
+  .sol-hero__title { text-shadow: 3px 3px 0 rgba(34, 26, 18, 0.18); }
+  .sol-hero__sub { font-size: 15.5px; margin-bottom: 22px; }
+  .sol-hero__cta .sol-btn { flex: 1 1 100%; }
 }
 
 /* ---------- карточки ---------- */
@@ -434,6 +462,12 @@
 }
 
 @media (max-width: 960px) {
+  .sol-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
   .sol-services {
     grid-template-columns: 1fr;
   }
@@ -868,6 +902,12 @@
 
 @media (max-width: 960px) {
   .sol-station {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sol-station {
     grid-template-columns: 1fr;
   }
 }
@@ -1157,4 +1197,33 @@
   flex-wrap: wrap;
   color: var(--sol-muted);
   font-size: 13px;
+}
+
+/* ============================================================
+   Адаптив: телефоны и узкие планшеты
+   ============================================================ */
+
+@media (max-width: 760px) {
+  .sol-section { padding: 48px 0; }
+  .sol-container { padding: 0 16px; }
+
+  .sol-card { padding: 18px 16px; }
+  .sol-device,
+  .sol-ultimate { padding: 20px 16px; }
+  .sol-voucher { padding: 24px 16px; }
+
+  .sol-voucher__num { font-size: 30px; }
+  .sol-voucher__stamp { top: 12px; right: 12px; font-size: 10px; }
+
+  .sol-faq__item summary { padding: 14px; font-size: 14px; }
+  .sol-faq__item[open] p { margin: 0 14px; }
+
+  .sol-footer { padding: 36px 0 24px; }
+  .sol-footer__grid { gap: 24px; }
+  .sol-footer__bottom { margin-top: 28px; }
+
+  .sol-dining__note { padding: 16px; }
+  .sol-steps { gap: 10px; }
+  .sol-step { padding: 18px 16px; }
+  .sol-ultimate__nails { gap: 12px; }
 }
