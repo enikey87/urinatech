@@ -49,7 +49,7 @@ function Products() {
   return (
     <section id="products">
       <div className="container">
-        <span className="section-label">Каталог · производство с 2000 года</span>
+        <span className="section-label">П.2 · Каталог продукции · с 2000 года</span>
         <h2 className="section-title">Продукция</h2>
         <p className="section-sub">
           Каждая партия проходит генетическую экспертизу и вносится в блокчейн-реестр.

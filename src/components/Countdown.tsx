@@ -15,7 +15,7 @@ function Countdown() {
   return (
     <section id="queue">
       <div className="container">
-        <span className="section-label">Очередь на коллекционную партию</span>
+        <span className="section-label">Прил. А · Очередь на коллекционную партию</span>
         <h2 className="section-title">
           Следующая партия УТ-К — <span className="grad-text">2374 год</span>
         </h2>

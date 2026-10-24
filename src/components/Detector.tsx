@@ -8,7 +8,7 @@ function Detector() {
   return (
     <section id="detector">
       <div className="container">
-        <span className="section-label">Верификация продукции</span>
+        <span className="section-label">П.5 · Верификация продукции</span>
         <h2 className="section-title">Сервис проверки подлинности</h2>
         <p className="section-sub">
           В 2004 году выявлена копия сайта на хостинге by.ru. Реализация продукции

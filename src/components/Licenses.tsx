@@ -4,7 +4,7 @@ function Licenses() {
   return (
     <section id="licenses">
       <div className="container">
-        <span className="section-label">Разрешительные документы</span>
+        <span className="section-label">П.8 · Разрешительные документы</span>
         <h2 className="section-title">Лицензии и сертификаты</h2>
         <p className="section-sub">
           Реестр ведётся с 2002 года. Оригиналы хранятся в конюшне №4; доступ

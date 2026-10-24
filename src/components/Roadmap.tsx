@@ -4,7 +4,7 @@ function Roadmap() {
   return (
     <section id="roadmap">
       <div className="container">
-        <span className="section-label">Стратегия развития</span>
+        <span className="section-label">П.11 · Стратегия развития</span>
         <h2 className="section-title">Программа 2026–2030</h2>
         <p className="section-sub">
           Утверждена советом директоров 01.03.2026 (кворум обеспечен). Раздел

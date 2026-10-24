@@ -4,7 +4,7 @@ function Faq() {
   return (
     <section id="faq">
       <div className="container">
-        <span className="section-label">Вопросы и ответы</span>
+        <span className="section-label">П.12 · Вопросы и ответы</span>
         <h2 className="section-title">FAQ</h2>
         <div className="faq-list">
           {FAQ.map((f) => (

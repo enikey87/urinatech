@@ -6,6 +6,10 @@ function Header() {
 
   return (
     <header className="header">
+      <div className="topbar">
+        <span>ООО «УринаТех» · ТУ 1246-001-0202</span>
+        <span>ЭКЗ. № 1 · ЛИСТ 1 · ИЗМ. 1246</span>
+      </div>
       <div className="header__inner">
         <a className="logo" href="#top">
           <span className="logo__drop">УТ</span>

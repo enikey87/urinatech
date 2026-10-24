@@ -9,7 +9,7 @@ function Donor() {
     return (
       <section id="donor">
         <div className="container">
-          <span className="section-label">Донорская программа УТ-Донор</span>
+          <span className="section-label">П.6 · Донорская программа УТ-Донор</span>
           <h2 className="section-title">Заявка зарегистрирована</h2>
           <div className="donor-ticket">
             <div className="donor-ticket__id">{app.id}</div>
@@ -40,7 +40,7 @@ function Donor() {
   return (
     <section id="donor">
       <div className="container">
-        <span className="section-label">Донорская программа УТ-Донор</span>
+        <span className="section-label">П.6 · Донорская программа УТ-Донор</span>
         <h2 className="section-title">
           Компания <span className="grad-text">закупает сырьё</span> у физических лиц
         </h2>

@@ -32,11 +32,12 @@ function Hero() {
             <strong>12 000+</strong> зарегистрированных пациентов
           </span>
           <span className="hero-badge">
-            <strong>1</strong> претензия Красного Креста (рассматривается с 2003 г.)
+            <strong>1</strong> · претензия Красного Креста (рассматривается с 2003 г.)
           </span>
           <span className="hero-badge">18+ · имеются противопоказания</span>
         </div>
       </div>
+      <div className="stamp">Утверждено · Зинаида</div>
     </section>
   );
 }

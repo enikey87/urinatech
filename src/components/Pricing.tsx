@@ -4,7 +4,7 @@ function Pricing() {
   return (
     <section id="pricing">
       <div className="container">
-        <span className="section-label">Абонентское обслуживание «УТ+»</span>
+        <span className="section-label">П.3 · Абонентское обслуживание «УТ+»</span>
         <h2 className="section-title">Тарифные планы</h2>
         <p className="section-sub">
           Для физических и юридических лиц. Дилерская программа, кредитование и

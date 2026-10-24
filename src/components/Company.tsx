@@ -4,7 +4,7 @@ function Company() {
   return (
     <section id="company">
       <div className="container">
-        <span className="section-label">О компании</span>
+        <span className="section-label">П.9 · О компании</span>
         <h2 className="section-title">Корпоративное управление</h2>
         <p className="section-sub">
           Органограмма компании: генеральный директор → лошадь → все остальные.

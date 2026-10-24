@@ -8,7 +8,7 @@ function Calculator() {
   return (
     <section id="calculator">
       <div className="container">
-        <span className="section-label">Система «УТ-Интеллект» · бета</span>
+        <span className="section-label">Прил. Б · Система «УТ-Интеллект» · бета</span>
         <h2 className="section-title">
           Расчёт <span className="grad-text">дозировки</span>
         </h2>

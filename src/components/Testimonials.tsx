@@ -17,7 +17,7 @@ function Testimonials() {
   return (
     <section id="reviews">
       <div className="container">
-        <span className="section-label">Клинические случаи и обращения</span>
+        <span className="section-label">П.4 · Клинические случаи и обращения</span>
         <h2 className="section-title">Результаты применения</h2>
         <p className="section-sub">
           Публикуем все отзывы, включая отрицательные и требования об удалении —

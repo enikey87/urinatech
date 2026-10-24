@@ -4,7 +4,7 @@ function Struggle() {
   return (
     <section id="struggle">
       <div className="container">
-        <span className="section-label">Правовая позиция</span>
+        <span className="section-label">П.7 · Правовая позиция</span>
         <h2 className="section-title">Хроника разбирательств</h2>
         <p className="section-sub">
           Компания раскрывает все юридические претензии в полном объёме. Переписка
