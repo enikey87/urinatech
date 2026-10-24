@@ -142,10 +142,19 @@
   color: var(--sol-red);
 }
 
-/* ---------- эмблема ---------- */
+/* ---------- эмблема: славянское солнечное колесо ---------- */
+
+.sol-emblem__rim {
+  fill: var(--sol-paper);
+  stroke: var(--sol-ink);
+  stroke-width: 3.5;
+}
 
 .sol-emblem__rays {
-  fill: var(--sol-red);
+  fill: none;
+  stroke: var(--sol-red);
+  stroke-width: 7;
+  stroke-linecap: round;
   transform-origin: 50px 50px;
   animation: sol-spin 46s linear infinite;
 }

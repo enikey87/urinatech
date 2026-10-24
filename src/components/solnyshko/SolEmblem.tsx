@@ -1,5 +1,7 @@
 function SolEmblem({ size = 120 }: { size?: number }) {
-  const rays = Array.from({ length: 8 }, (_, i) => i * 45);
+  // Славянское солнечное колесо (коловрат): обод, восемь изогнутых
+  // лучей-спиц и ступица. Лучи медленно вращаются — колесо «кружит».
+  const spokes = Array.from({ length: 8 }, (_, i) => i * 45);
   return (
     <svg
       className="sol-emblem"
@@ -7,23 +9,20 @@ function SolEmblem({ size = 120 }: { size?: number }) {
       height={size}
       viewBox="0 0 100 100"
       role="img"
-      aria-label="Эмблема пансионата «Солнышко»"
+      aria-label="Эмблема пансионата «Солнышко» — солнечное колесо"
     >
+      <circle className="sol-emblem__rim" cx="50" cy="50" r="45" />
       <g className="sol-emblem__rays">
-        {rays.map((deg) => (
-          <rect
+        {spokes.map((deg) => (
+          <path
             key={deg}
-            x="46.5"
-            y="1"
-            width="7"
-            height="17"
-            rx="3.5"
+            d="M 50 34 Q 58 22 50 9"
             transform={`rotate(${deg} 50 50)`}
           />
         ))}
       </g>
-      <circle cx="50" cy="50" r="24" className="sol-emblem__disc" />
-      <circle cx="50" cy="50" r="10" className="sol-emblem__core" />
+      <circle className="sol-emblem__disc" cx="50" cy="50" r="14" />
+      <circle className="sol-emblem__core" cx="50" cy="50" r="5.5" />
     </svg>
   );
 }
