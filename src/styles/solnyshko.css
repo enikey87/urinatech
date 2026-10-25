@@ -899,6 +899,176 @@
   font-style: italic;
 }
 
+/* ---------- детский отдых «Малые медвежата» ---------- */
+
+.sol-kids {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 44px;
+}
+
+@media (max-width: 980px) {
+  .sol-kids {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sol-kids {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-kids__age {
+  font-family: var(--sol-cond);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--sol-navy);
+  border-bottom: 1px dashed var(--sol-line);
+  padding-bottom: 6px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.sol-kids__shift {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed var(--sol-ink);
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+  overflow-wrap: anywhere;
+}
+
+.sol-kids__lower {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .sol-kids__lower {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-kids__day {
+  min-width: 0;
+  background: var(--sol-paper);
+  border: 2px solid var(--sol-ink);
+  border-radius: 3px;
+  padding: 24px 22px;
+}
+
+.sol-kids__day-title {
+  font-family: var(--sol-cond);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--sol-ink);
+}
+
+.sol-kids__day-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-kids__day-list li {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--sol-line);
+  font-size: 14.5px;
+  color: var(--sol-ink);
+}
+
+.sol-kids__day-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sol-kids__day-list b {
+  flex-shrink: 0;
+  min-width: 52px;
+  font-family: var(--sol-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--sol-red);
+}
+
+.sol-kids__day-list span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.sol-kids__rules {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.sol-kids__rule {
+  min-width: 0;
+  border-radius: 2px;
+  padding: 18px 18px 16px;
+}
+
+.sol-kids__rule--strict {
+  border: 2px solid var(--sol-red);
+  background: repeating-linear-gradient(
+      135deg,
+      transparent 0 14px,
+      rgba(176, 58, 46, 0.06) 14px 16px
+    ),
+    var(--sol-paper);
+}
+
+.sol-kids__rule--note {
+  border: 2px dashed var(--sol-navy);
+  background: rgba(39, 67, 107, 0.05);
+}
+
+.sol-kids__rule h4 {
+  font-family: var(--sol-cond);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.sol-kids__rule p {
+  font-size: 13.5px;
+  color: var(--sol-muted);
+  overflow-wrap: anywhere;
+}
+
+.sol-kids__registry {
+  margin-top: 18px;
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+  overflow-wrap: anywhere;
+}
+
 /* ---------- акции ---------- */
 
 .sol-promos {
@@ -1506,6 +1676,9 @@
   .sol-footer__bottom { margin-top: 28px; }
 
   .sol-dining__note { padding: 16px; }
+  .sol-kids__day { padding: 18px 16px; }
+  .sol-kids__rule { padding: 16px 14px; }
+  .sol-kids__day-list li { gap: 10px; font-size: 14px; }
   .sol-steps { gap: 10px; }
   .sol-step { padding: 18px 16px; }
   .sol-ultimate__nails { gap: 12px; }
