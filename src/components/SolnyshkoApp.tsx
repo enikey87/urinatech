@@ -10,6 +10,7 @@ import SolRooms from "./solnyshko/SolRooms";
 import SolDining from "./solnyshko/SolDining";
 import SolKids from "./solnyshko/SolKids";
 import SolPromos from "./solnyshko/SolPromos";
+import SolLoyalty from "./solnyshko/SolLoyalty";
 import SolStaff from "./solnyshko/SolStaff";
 import SolReviews from "./solnyshko/SolReviews";
 import SolSteps from "./solnyshko/SolSteps";
@@ -34,6 +35,7 @@ export default function SolnyshkoApp() {
         <SolDining />
         <SolKids />
         <SolPromos />
+        <SolLoyalty />
         <SolStaff />
         <SolReviews />
         <SolSteps />
