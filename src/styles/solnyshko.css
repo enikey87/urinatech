@@ -1115,6 +1115,158 @@
   color: var(--sol-muted);
 }
 
+/* ---------- документы здравницы ---------- */
+
+.sol-docs {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1020px) {
+  .sol-docs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sol-docs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-doc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 24px 20px 20px;
+  background: #fffdf4;
+  border: 2px solid var(--sol-ink);
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 rgba(34, 26, 18, 0.85);
+  overflow-wrap: anywhere;
+}
+
+/* перфорация по верхней кромке бумаги */
+.sol-doc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  border-bottom: 1px dashed var(--sol-line);
+  background-image: radial-gradient(circle, var(--sol-line) 1.5px, transparent 1.6px);
+  background-size: 12px 12px;
+  background-position: 6px 6px;
+  background-repeat: repeat-x;
+}
+
+.sol-doc__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.sol-doc__emoji {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.sol-doc__status {
+  flex-shrink: 0;
+  font-family: var(--sol-cond);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+
+.sol-doc__status--ok {
+  color: var(--sol-navy);
+  background: rgba(39, 67, 107, 0.07);
+}
+
+.sol-doc__status--fail {
+  color: var(--sol-muted);
+  background: rgba(92, 79, 56, 0.07);
+}
+
+.sol-doc__status--note {
+  color: var(--sol-red);
+  background: rgba(176, 58, 46, 0.07);
+}
+
+.sol-doc__no {
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+  padding-bottom: 7px;
+  border-bottom: 1px dashed var(--sol-line);
+}
+
+.sol-doc h3 {
+  font-family: var(--sol-cond);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.sol-doc__issuer {
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--sol-navy);
+}
+
+.sol-doc__note {
+  color: var(--sol-muted);
+  font-size: 14px;
+}
+
+.sol-doc__valid {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed var(--sol-ink);
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.sol-doc__valid span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--sol-muted);
+}
+
+.sol-docs__registry {
+  margin-top: 18px;
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+}
+
 /* ---------- форма / путёвка ---------- */
 
 .sol-form {
@@ -1338,6 +1490,7 @@
   .sol-container { padding: 0 16px; }
 
   .sol-card { padding: 18px 16px; }
+  .sol-doc { padding: 22px 16px 18px; }
   .sol-device,
   .sol-ultimate { padding: 20px 16px; }
   .sol-voucher { padding: 24px 16px; }

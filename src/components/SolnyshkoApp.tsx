@@ -13,6 +13,7 @@ import SolStaff from "./solnyshko/SolStaff";
 import SolReviews from "./solnyshko/SolReviews";
 import SolSteps from "./solnyshko/SolSteps";
 import SolBooking from "./solnyshko/SolBooking";
+import SolDocuments from "./solnyshko/SolDocuments";
 import SolFaq from "./solnyshko/SolFaq";
 import SolFooter from "./solnyshko/SolFooter";
 
@@ -35,6 +36,7 @@ export default function SolnyshkoApp() {
         <SolReviews />
         <SolSteps />
         <SolBooking />
+        <SolDocuments />
         <SolFaq />
       </main>
       <SolFooter />
