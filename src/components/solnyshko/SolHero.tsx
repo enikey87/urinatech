@@ -1,11 +1,35 @@
+import { useState } from "react";
 import SolEmblem from "./SolEmblem";
+import { playNeigh } from "./neigh";
 
 function SolHero() {
+  const [neigh, setNeigh] = useState(0);
+
+  const callConsultant = () => {
+    setNeigh((count) => count + 1);
+    playNeigh();
+  };
+
   return (
     <section className="sol-hero">
       <div className="sol-container">
         <div className="sol-hero__emblem">
-          <SolEmblem size={190} />
+          <button
+            type="button"
+            className="sol-hero__emblem-btn"
+            onClick={callConsultant}
+            aria-label="Позвать консультанта — Зинаиду"
+          >
+            <SolEmblem size={190} decorative />
+            <span className="sol-hero__emblem-hint">
+              нажмите · консультант на связи
+            </span>
+          </button>
+          {neigh > 0 && (
+            <span className="sol-hero__emblem-reply" role="status" key={neigh}>
+              «И-го-го» — Зинаида
+            </span>
+          )}
         </div>
         <div className="sol-hero__text">
           <span className="sol-label">
