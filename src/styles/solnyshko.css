@@ -1913,6 +1913,197 @@
   font-size: 13px;
 }
 
+/* ---------- новости и афиша ---------- */
+
+.sol-news {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 44px;
+}
+
+@media (max-width: 800px) {
+  .sol-news {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-news__item {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 22px;
+  background: var(--sol-paper);
+  border: 2px solid var(--sol-ink);
+  border-left: 6px solid var(--sol-red);
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 rgba(34, 26, 18, 0.85);
+}
+
+.sol-news__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 14px;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--sol-line);
+}
+
+.sol-news__date {
+  font-family: var(--sol-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--sol-red);
+}
+
+.sol-news__no {
+  min-width: 0;
+  font-family: var(--sol-mono);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+  overflow-wrap: anywhere;
+}
+
+.sol-news__item h3 {
+  font-family: var(--sol-cond);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.sol-news__item p {
+  color: var(--sol-muted);
+  font-size: 14px;
+}
+
+.sol-afisha__title {
+  margin-top: 46px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--sol-ink);
+  font-family: var(--sol-cond);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sol-afisha__lead {
+  margin-top: 10px;
+  max-width: 660px;
+  color: var(--sol-muted);
+  font-size: 14px;
+}
+
+.sol-afisha {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .sol-afisha {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sol-afisha {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sol-afisha__item {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 18px;
+  border: 2px solid var(--sol-ink);
+  border-top: 6px solid var(--sol-navy);
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+      135deg,
+      transparent 0 14px,
+      rgba(39, 67, 107, 0.05) 14px 16px
+    ),
+    var(--sol-paper);
+}
+
+.sol-afisha__when {
+  min-width: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--sol-line);
+  font-family: var(--sol-mono);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sol-navy);
+  overflow-wrap: anywhere;
+}
+
+.sol-afisha__item h4 {
+  font-family: var(--sol-cond);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.sol-afisha__emoji {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.sol-afisha__place {
+  min-width: 0;
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sol-red);
+  overflow-wrap: anywhere;
+}
+
+.sol-afisha__item p {
+  color: var(--sol-muted);
+  font-size: 13.5px;
+}
+
+.sol-news__registry {
+  margin-top: 18px;
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sol-muted);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .sol-news__item {
+    padding: 18px 16px;
+  }
+
+  .sol-afisha__item {
+    padding: 18px 16px;
+  }
+}
+
 /* ============================================================
    Адаптив: телефоны и узкие планшеты
    ============================================================ */
