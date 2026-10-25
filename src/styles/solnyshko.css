@@ -14,6 +14,7 @@
   --sol-red: #b03a2e;
   --sol-navy: #27436b;
   --sol-cond: "Oswald", "PT Sans", sans-serif;
+  --sol-mono: "IBM Plex Mono", "PT Mono", monospace;
 
   min-height: 100vh;
   background: var(--sol-bg);
@@ -1069,6 +1070,49 @@
   .sol-staff {
     grid-template-columns: 1fr;
   }
+}
+
+/* удостоверение: регалия и категория отдельным реквизитом карточки */
+
+.sol-staff__id {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px dashed var(--sol-ink);
+  border-left: 3px solid var(--sol-red);
+  border-radius: 2px;
+  background: #fffdf4;
+  font-family: var(--sol-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.sol-staff__id-num {
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+  border-bottom: 1px dashed var(--sol-line);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  color: var(--sol-muted);
+}
+
+.sol-staff__id-title {
+  font-weight: 700;
+  color: var(--sol-ink);
+}
+
+.sol-staff__id-cat {
+  font-weight: 700;
+  color: var(--sol-red);
+}
+
+.sol-staff__id-confirmed {
+  color: var(--sol-muted);
 }
 
 /* ---------- форма / путёвка ---------- */
