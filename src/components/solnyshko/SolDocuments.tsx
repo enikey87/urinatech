@@ -1,0 +1,53 @@
+import { SOL_DOCUMENTS } from "../../data/solnyshko";
+
+function SolDocuments() {
+  return (
+    <section className="sol-section">
+      <div className="sol-container">
+        <span className="sol-label">Документы</span>
+        <h2 className="sol-title">
+          Лицензии и <em>документы</em>
+        </h2>
+        <p className="sol-sub">
+          Опись ведётся с 1246 года и сверяется с журналом спячки. Оригиналы
+          хранятся в рамке №2, сейфе старшей сестры и памяти Потапыча; сканы не
+          прилагаются — подлинник всегда ближе.
+        </p>
+        <div className="sol-docs">
+          {SOL_DOCUMENTS.map((d) => (
+            <article className="sol-doc" key={d.title}>
+              <div className="sol-doc__head">
+                <span className="sol-doc__emoji">{d.emoji}</span>
+                <span
+                  className={`sol-doc__status ${
+                    d.ok === true
+                      ? "sol-doc__status--ok"
+                      : d.ok === false
+                        ? "sol-doc__status--fail"
+                        : "sol-doc__status--note"
+                  }`}
+                >
+                  {d.status}
+                </span>
+              </div>
+              <div className="sol-doc__no">{d.no}</div>
+              <h3>{d.title}</h3>
+              <p className="sol-doc__issuer">{d.issuer}</p>
+              <p className="sol-doc__note">{d.note}</p>
+              <div className="sol-doc__valid">
+                <span>Срок действия</span>
+                {d.valid}
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="sol-docs__registry">
+          Опись № 1246-О · документов: {SOL_DOCUMENTS.length} · утрачено: 0 ·
+          сомнительных: 0 · сверено с журналом спячки
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export default SolDocuments;
