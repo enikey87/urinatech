@@ -1,4 +1,12 @@
-function SolEmblem({ size = 120 }: { size?: number }) {
+type SolEmblemProps = {
+  size?: number;
+  /** Внутри кнопки эмблема — только картинка: подпись даёт сама кнопка. */
+  decorative?: boolean;
+};
+
+const EMBLEM_LABEL = "Эмблема пансионата «Солнышко» — солнечное колесо";
+
+function SolEmblem({ size = 120, decorative = false }: SolEmblemProps) {
   // Славянское солнечное колесо (коловрат): обод, восемь изогнутых
   // лучей-спиц и ступица. Лучи медленно вращаются — колесо «кружит».
   const spokes = Array.from({ length: 8 }, (_, i) => i * 45);
@@ -8,8 +16,10 @@ function SolEmblem({ size = 120 }: { size?: number }) {
       width={size}
       height={size}
       viewBox="0 0 100 100"
-      role="img"
-      aria-label="Эмблема пансионата «Солнышко» — солнечное колесо"
+      role={decorative ? "presentation" : "img"}
+      aria-label={decorative ? undefined : EMBLEM_LABEL}
+      aria-hidden={decorative ? true : undefined}
+      focusable={false}
     >
       <circle className="sol-emblem__rim" cx="50" cy="50" r="45" />
       <g className="sol-emblem__rays">
