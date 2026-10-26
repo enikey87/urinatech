@@ -10,6 +10,7 @@ import { CookiesStore } from "./CookiesStore";
 import { RouterStore } from "./RouterStore";
 import { SolnyshkoStore } from "./SolnyshkoStore";
 import { MochaStore } from "./MochaStore";
+import { QuizStore } from "./QuizStore";
 
 export interface RootStore {
   cart: CartStore;
@@ -23,6 +24,7 @@ export interface RootStore {
   router: RouterStore;
   solnyshko: SolnyshkoStore;
   mocha: MochaStore;
+  quiz: QuizStore;
 }
 
 export function createRootStore(): RootStore {
@@ -38,6 +40,7 @@ export function createRootStore(): RootStore {
     router: new RouterStore(),
     solnyshko: new SolnyshkoStore(),
     mocha: new MochaStore(),
+    quiz: new QuizStore(),
   };
 }
 

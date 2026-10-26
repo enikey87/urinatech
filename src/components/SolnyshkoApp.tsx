@@ -1,5 +1,6 @@
 import SolHeader from "./solnyshko/SolHeader";
 import SolHero from "./solnyshko/SolHero";
+import SolQuiz from "./solnyshko/SolQuiz";
 import SolServices from "./solnyshko/SolServices";
 import SolProfiles from "./solnyshko/SolProfiles";
 import SolStation from "./solnyshko/SolStation";
@@ -26,6 +27,7 @@ export default function SolnyshkoApp() {
       <SolHeader />
       <main>
         <SolHero />
+        <SolQuiz />
         <SolServices />
         <SolProfiles />
         <SolStation />
