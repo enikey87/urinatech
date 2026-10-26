@@ -215,3 +215,26 @@ export const INSERT_ROWS: InsertRow[] = [
     text: "Без рецепта, но с поклоном.",
   },
 ];
+
+export interface MochaQuote {
+  symbol: string;
+  unit: string;
+  opening: number;
+  maxChange: number;
+  notes: string[];
+}
+
+export const MOCHA: MochaQuote = {
+  symbol: "$MOCHA",
+  unit: "за канистру",
+  opening: 12.46,
+  maxChange: 12.4,
+  notes: [
+    "рост зафиксирован",
+    "значение согласовано с биржей",
+    "торги проходят в штатном режиме",
+    "объём подтверждён нотариально",
+    "заявка на сено удовлетворена",
+    "котировка внесена в реестр",
+  ],
+};
