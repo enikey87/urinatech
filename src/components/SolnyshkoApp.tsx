@@ -6,6 +6,7 @@ import SolProfiles from "./solnyshko/SolProfiles";
 import SolStation from "./solnyshko/SolStation";
 import SolEnemas from "./solnyshko/SolEnemas";
 import SolKalofores from "./solnyshko/SolKalofores";
+import SolRoots from "./solnyshko/SolRoots";
 import SolFactors from "./solnyshko/SolFactors";
 import SolRooms from "./solnyshko/SolRooms";
 import SolDining from "./solnyshko/SolDining";
@@ -33,6 +34,7 @@ export default function SolnyshkoApp() {
         <SolStation />
         <SolEnemas />
         <SolKalofores />
+        <SolRoots />
         <SolFactors />
         <SolRooms />
         <SolDining />
