@@ -3,7 +3,6 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "./stores/RootStore";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Stats from "./components/Stats";
 import MochaTicker from "./components/MochaTicker";
 import Products from "./components/Products";
 import Countdown from "./components/Countdown";
@@ -51,7 +50,6 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
       <Header />
       <main>
         <Hero />
-        <Stats />
         <MochaTicker />
         <Products />
         <Countdown />

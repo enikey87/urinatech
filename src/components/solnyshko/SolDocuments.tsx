@@ -41,10 +41,6 @@ function SolDocuments() {
             </article>
           ))}
         </div>
-        <p className="sol-docs__registry">
-          Опись № 1246-О · документов: {SOL_DOCUMENTS.length} · утрачено: 0 ·
-          сомнительных: 0 · сверено с журналом спячки
-        </p>
       </div>
     </section>
   );
