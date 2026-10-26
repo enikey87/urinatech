@@ -225,7 +225,7 @@ export const ROOT_VEGETABLES: RootVegetable[] = [
     emoji: "🌿",
     category: "почётная",
     exposure: "не определена",
-    recipient: "Выдаче не подлежит. Одно упоминание в журнале (1953).",
+    recipient: "Выдаче не подлежит. Одно упоминание в журнале (1953, Груздев В.).",
   },
 ];
 

@@ -8,6 +8,7 @@ const TAG_CLASS: Record<NonNullable<Product["tag"]>, string> = {
   "Нет в наличии": "tag--soldout",
   "Новинка": "tag--new",
   "Умное устройство": "tag--iot",
+  "Молекул нет": "tag--molecule",
 };
 
 function ProductCard({ product }: { product: Product }) {
