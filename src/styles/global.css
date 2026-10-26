@@ -537,6 +537,108 @@ h1, h2, h3 {
   margin-top: 6px;
 }
 
+/* ---------- котировки $MOCHA ---------- */
+
+/* Нижний отступ секции «показатели» (92px) здесь избыточен: тикер — их
+   продолжение, поэтому подтягиваем строку к карточкам. */
+.mocha {
+  padding: 0;
+  margin-top: -56px;
+}
+
+.mocha__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+  padding: 12px 18px;
+  border-left: 6px solid var(--red);
+}
+
+.mocha__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.mocha__sym {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--red);
+}
+
+.mocha__stamp {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px dashed var(--border-soft);
+  padding: 2px 7px;
+  white-space: nowrap;
+}
+
+.mocha__quote {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  min-width: 0;
+}
+
+.mocha__price {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.mocha__chg {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.mocha__chg--up {
+  color: var(--navy);
+}
+
+.mocha__chg--down {
+  color: var(--red);
+}
+
+.mocha__unit {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.mocha__note {
+  flex: 1 1 200px;
+  min-width: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.mocha__chart {
+  flex: 0 1 240px;
+  min-width: 150px;
+  height: 44px;
+}
+
+.mocha__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* ---------- продукция ---------- */
 
 .products-grid {
@@ -1695,6 +1797,13 @@ h1, h2, h3 {
 @media (max-width: 640px) {
   .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .stat { padding: 16px 10px; }
+}
+
+@media (max-width: 760px) {
+  .mocha { margin-top: -16px; }
+  .mocha__row { gap: 8px 14px; padding: 12px 14px; }
+  .mocha__note { flex: 1 1 100%; }
+  .mocha__chart { flex: 1 1 100%; height: 52px; }
 }
 
 @media (max-width: 400px) {

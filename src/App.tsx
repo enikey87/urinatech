@@ -4,6 +4,7 @@ import { useStore } from "./stores/RootStore";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
+import MochaTicker from "./components/MochaTicker";
 import Products from "./components/Products";
 import Countdown from "./components/Countdown";
 import Calculator from "./components/Calculator";
@@ -51,6 +52,7 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
       <main>
         <Hero />
         <Stats />
+        <MochaTicker />
         <Products />
         <Countdown />
         <Calculator />
