@@ -695,6 +695,7 @@ h1, h2, h3 {
 .tag--soldout { background: var(--red-soft); color: var(--danger); border: 1px dashed var(--red); }
 .tag--new { background: var(--navy-soft); color: var(--navy); border: 1px solid var(--navy); }
 .tag--iot { background: rgba(31, 26, 18, 0.05); color: var(--muted); border: 1px dashed var(--border); }
+.tag--molecule { background: transparent; color: var(--muted); border: 1px dashed var(--border); }
 
 .product-card__name {
   font-size: 19px;
