@@ -1,4 +1,4 @@
-import { JOBS, TEAM } from "../data/company";
+import { TEAM } from "../data/company";
 
 function Company() {
   return (
@@ -20,43 +20,6 @@ function Company() {
               <div className="team-card__name">{m.name}</div>
               <div className="team-card__role">{m.role}</div>
               <div className="team-card__bio">{m.bio}</div>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="subsection-title">Вакансии</h3>
-        <p className="section-sub">
-          Резюме принимаются в гостевой книге. Собеседование проводит Зинаида
-          (с переводчиком).
-        </p>
-        <div className="jobs">
-          {JOBS.map((j) => (
-            <div key={j.title} className="glass job">
-              <div>
-                <div className="job__title">{j.title}</div>
-                <div className="job__meta">{j.meta}</div>
-                <p style={{ marginTop: 12, fontSize: 13.5, color: "var(--muted)" }}>
-                  {j.offer}
-                </p>
-              </div>
-              <div>
-                <div className="job__title" style={{ fontSize: 13, color: "var(--amber)" }}>
-                  Обязанности
-                </div>
-                <ul>
-                  {j.duties.map((d) => (
-                    <li key={d}>{d}</li>
-                  ))}
-                </ul>
-                <div className="job__title" style={{ fontSize: 13, color: "var(--amber)" }}>
-                  Требования
-                </div>
-                <ul>
-                  {j.reqs.map((r) => (
-                    <li key={r}>{r}</li>
-                  ))}
-                </ul>
-              </div>
             </div>
           ))}
         </div>

@@ -511,32 +511,6 @@ h1, h2, h3 {
   color: var(--red);
 }
 
-/* ---------- показатели ---------- */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 16px;
-}
-
-.stat {
-  padding: 24px;
-  text-align: center;
-}
-
-.stat__value {
-  font-family: var(--cond);
-  font-weight: 700;
-  font-size: clamp(26px, 3.2vw, 36px);
-  color: var(--red);
-}
-
-.stat__label {
-  color: var(--muted);
-  font-size: 13.5px;
-  margin-top: 6px;
-}
-
 /* ---------- котировки $MOCHA ---------- */
 
 /* Нижний отступ секции «показатели» (92px) здесь избыточен: тикер — их
@@ -1611,24 +1585,6 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-.jobs { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; }
-
-.job {
-  padding: 26px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
-}
-
-@media (max-width: 760px) { .job { grid-template-columns: 1fr; } }
-
-.job__title { font-family: var(--cond); font-weight: 600; font-size: 16px; text-transform: uppercase; }
-.job__meta { color: var(--red); font-family: var(--mono); font-size: 12px; margin-top: 4px; }
-
-.job ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-.job li { font-size: 13.5px; color: var(--text); display: flex; gap: 8px; }
-.job li::before { content: "—"; color: var(--red); }
-
 /* ---------- партнёры ---------- */
 
 .section-slim { padding: 40px 0; }
@@ -1793,11 +1749,6 @@ h1, h2, h3 {
   .cart-drawer__head,
   .cart-drawer__foot { padding: 16px; }
   .cart-items { padding: 14px 16px; }
-}
-
-@media (max-width: 640px) {
-  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .stat { padding: 16px 10px; }
 }
 
 @media (max-width: 760px) {
